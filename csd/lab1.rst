@@ -96,25 +96,6 @@ and this shows that the JS has executed and called back to the F5 Cloud with the
 
 |
 
-1. Configure Logging
-
- When you enable CSD, CSD automatically creates an Alert Receiver using the email address you entered for your account on Distributed Cloud Console. CSD also automatically creates an Alert Policy and adds a CSD alerts group to this policy. To ensure that you receive alerts when CSD detects suspicious activity, you need to verify your email on the Alert Receiver.
- Just modify the alert receiver email address accordingly if needed or use a different alert mechanism.
-
- .. image:: ../_static/csd-alert-receiver.png
-
-|
-
- .. image:: ../_static/csd-alert-receiver-details.png
-
-|
-
- Example for an alert email
- 
- .. image:: ../_static/alert-email.png
-
-|
-
 Next: |signup|
 
 .. |signup| raw:: html

@@ -11,7 +11,7 @@ Login to F5 Distributed Cloud using your own account and go to the Client-Side D
 .. note:: Part of the UDF Deployment is an iRule that both adds the required Telemetry to the Website and some "simulated" malicious JavaScript elements.  If you would like to have a look at this iRule, you can see the files here: |irule|
 
 .. |irule| raw:: html
-  <a href="addClientSideDefense.tcl" _target="_irule">addClientSideDefense.tcl</a>
+  <a href=./addClientSideDefense.tcl _target="_irule">addClientSideDefense.tcl</a>
 
 |
 
@@ -96,7 +96,27 @@ The CSD Dashboard displays the following tabs that you use for displaying data, 
 
  .. image:: ../_static/csd-block-susp-allow-other.png
 
+
+|1. Configure Logging
+---------------------
+
+ When you enable CSD, CSD automatically creates an Alert Receiver using the email address you entered for your account on Distributed Cloud Console. CSD also automatically creates an Alert Policy and adds a CSD alerts group to this policy. To ensure that you receive alerts when CSD detects suspicious activity, you need to verify your email on the Alert Receiver.
+ Just modify the alert receiver email address accordingly if needed or use a different alert mechanism.
+
+ .. image:: ../_static/csd-alert-receiver.png
+
 |
+
+ .. image:: ../_static/csd-alert-receiver-details.png
+
+|
+
+ Example for an alert email
+ 
+ .. image:: ../_static/alert-email.png
+
+|
+
 
 Appendix A - Artificially generate suspicious domains
 =====================================================
