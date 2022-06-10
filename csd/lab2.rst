@@ -11,7 +11,8 @@ Login to F5 Distributed Cloud using your own account and go to the Client-Side D
 .. note:: Part of the UDF Deployment is an iRule that both adds the required Telemetry to the Website and some "simulated" malicious JavaScript elements.  If you would like to have a look at this iRule, you can see the files here: |irule|
 
 .. |irule| raw:: html
-  <a href=./addClientSideDefense.tcl _target="_irule">addClientSideDefense.tcl</a>
+
+            <a href=./addClientSideDefense.tcl _target="_irule">addClientSideDefense.tcl</a>
 
 |
 
