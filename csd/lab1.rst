@@ -44,7 +44,7 @@ Lab 1: Configure CSD and add the JavaScript tag to the web server
 
 To access the BIG-IP, on the Class UDF screen, click the link for TMUI under the BIG-IP.  The username and password is **admin / f5DEMOS4u!**.
 
-.. image:: ../_static/agility-udf-ui-2.png
+.. image:: ../_static/agility-udf-ui_1.png
 
 
 In your BIG-IP TMUI, go to **Local Traffic->iRules->Data Group Lists** and select the Data Group client_side_defense_js
@@ -78,7 +78,7 @@ Click the "Add" button and then click "Update" at the bottom of the form to save
 
  Now you can test the site.  On the UDF main page, under the BIG-IP, open the JuiceShop link
 
- .. image:: ../_static/agility-udf-ui-2.png
+ .. image:: ../_static/agility-udf-ui_2.png
 
 |
 
