@@ -70,12 +70,15 @@ Click the "Add" button and then click "Update" at the bottom of the form to save
 
  Finally proceed with step 5 from the screenshot above to test if the JavaScript tag was added successfully to your web server.
 
- Click on "Test JS Injection" for the domain you want to test. In our example f5.com.
+ Click on "Test JS Injection" for the domain you want to test. In our example you can copy and paste the JuiceShop link out of your UDF class.
 
  .. image:: ../_static/csd-js-test1.png 
 
-|
+.. note:: The UDF can mess with this test.  In all likelihood you will get a failure but with a "true" site you are working with, it should report back with Success.
 
+.. image:: ../_static/agility-test-JS-failure.png
+
+|
  Now you can test the site.  On the UDF main page, under the BIG-IP, open the JuiceShop link
 
  .. image:: ../_static/agility-udf-ui_2.png
