@@ -89,6 +89,8 @@ The CSD Dashboard displays the following tabs that you use for displaying data, 
 
 Hitting Enter will execute the Pasted commands.
 
+You can also clear the Console and Network screens if you like with the highlighted buttons.
+
  .. image:: ../_static/agility-demonstrating-csd_4.png
 
 This shows that the Domain has been Mitigated.
@@ -118,14 +120,26 @@ This shows that the Domain has been Mitigated.
 
 |
 
- .. image:: ../_static/csd-alert-receiver-details.png
-
+To verify, click the menu on the right and click "Verify Email"
 |
 
- Example for an alert email
- 
+ .. image:: ../_static/agility-email-verification_2.png
+
+and then enter the code you recieve in the "Enter Verification code" form
+
+ .. image:: ../_static/agility-email-verification_1.png
+
+You can configure other alert systems as well
+
+ .. image:: ../_static/csd-alert-receiver-details.png
+
+ Example for an alert email "Verify Email" 
+
  .. image:: ../_static/alert-email.png
 
+You can also see alerts interactively:
+
+.. image:: ../_static/agility-alert-dashboard.png
 |
 
 
@@ -142,7 +156,7 @@ Appendix A - Artificially generate suspicious domains
  - Local proxy like Charles proxy
  - Or just add the code to your testing web site but don't foget to remove it after the test.
 
-.. note:: For demoing purposes, we have added already a similar code as shown below to the sales demo app https://shop.sales-demo.f5demos.com/. You can verify it by viewing the source code of the web page.
+.. note:: For demoing purposes, we have added already a similar code as shown below to the demo app JuiceShop. You can verify it by viewing the source code of the web page.
 
  You can use the code as shown below with the fake domains or replace the fake domains with the ones you want to use for the test::
   </script><script>(function(){var s=document.createElement("script");var domains=["ganalitis.com","ganalitics.com","gstatcs.com","webfaset.com","fountm.online","pixupjqes.tech","jqwereid.online"];for (var i=0; i < domains.length; ++i){s.src="https://" + domains[i];}})();</script>
