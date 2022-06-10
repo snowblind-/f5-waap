@@ -4,11 +4,12 @@ Using the Client Side Defense Dashboard
 Lab 2: Mitigate suspicious or allow unsuspicious domains
 --------------------------------------------------------
 
-Login to F5 Distributed Cloud using your own account or optional for *F5 SEs*, login into the f5-sales-demo tenant using the credentials for the read only account from the `f5-sales-demo tenant <https://teams.microsoft.com/l/message/19:45ba7ac2ebb540ecb3b44929aebd7e99@thread.tacv2/1645109960193?tenantId=dd3dfd2f-6a3b-40d1-9be0-bf8327d81c50&groupId=2dc42443-8b46-4694-aa58-defbd3dc8a4b&parentMessageId=1645109960193&teamName=SME-Volterra&channelName=Sales%20Demo%20Tenant%20Ops&createdTime=1645109960193>`_ and go to the Client-Side Defense dashboard.
+Login to F5 Distributed Cloud using your own account and go to the Client-Side Defense dashboard.
 
 |
 
-.. note:: I've generated some artificially injections with suspicious domains for the f5-sales-demo tenant to make demos easier. If you use your own website, you can generate some artificially injections with suspicious domains as explained in **Appendix A** at the end of this document, before you continue this lab.
+.. note:: Part of the UDF Deployment is an iRule that both adds the required Telemetry to the Website and some "simulated" malicious JavaScript elements.  If you would like to have a look at this iRule, you can see the files here: 
+  <a href="./addClientSideDefense.tcl">addClientSideDefense.tcl</a>
 
 |
 
