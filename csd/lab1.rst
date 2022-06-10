@@ -28,17 +28,11 @@ Lab 1: Configure CSD and add the JavaScript tag to the web server
 
 |
 
-3. Add the JavaScript tag to **your** web server
-
-
- .. note:: | For F5 SEs, who don't have a webserver available to add the CSD JavaScript tag:
-    
-     The CSD JavaScript tag was already added, for demo purposes, to the demo-app https://shop.sales-demo.f5demos.com hosted on the F5 Distributed Cloud with the CSD JavaScript tag from the *f5-sales-demo* tenant.
-     Please check this F5 internal channel for the credentials to login to the `f5-sales-demo tenant <https://teams.microsoft.com/l/message/19:45ba7ac2ebb540ecb3b44929aebd7e99@thread.tacv2/1645109960193?tenantId=dd3dfd2f-6a3b-40d1-9be0-bf8327d81c50&groupId=2dc42443-8b46-4694-aa58-defbd3dc8a4b&parentMessageId=1645109960193&teamName=SME-Volterra&channelName=Sales%20Demo%20Tenant%20Ops&createdTime=1645109960193>`_ as a read only user.
+3. Add the JavaScript tag to **your** web server in your UDF
 
 |
 
- Click on "Configuration" - "How to Inject JS" and follow step *1 - 3* on the right for adding the JavaScript tag to **your** webpage between the <head> and </head> tags. Step 4 - 5 is explained below.
+ Click on "Configuration" - "How to Inject JS" and follow step *1 - 3* on the right for adding the JavaScript tag to **your** webpage between the <head> and </head> tags. Step 5 - 6 is explained below.
 
  .. image:: ../_static/csd-script.png
 
@@ -46,7 +40,33 @@ Lab 1: Configure CSD and add the JavaScript tag to the web server
      
 |
 
- After you have added the JavaScript tag to your web server, continue with step 4 from the screenshot above by adding the domain to protect. In our example f5demos.com.
+4. Update the Data Group with **your** JS identifier:
+
+To access the BIG-IP, on the Class UDF screen, click the link for TMUI under the BIG-IP.  The username and password is **admin / f5DEMOS4u**.
+
+
+
+* * **TODO - Add screen shot**
+
+
+
+
+In your BIG-IP TMUI, go to **Local Traffic->iRules->Data Group Lists** and select the Data Group client_side_defense_js
+
+.. image:: ../_static/datagrouplist.png
+
+In the edit screen, first select the row for "access.udf.f5.com" and then click "Edit"
+
+.. image:: ../_static/select_dg_item.png
+
+Replace the Value "<REPLACEME>" with the JS you copied from the XC CSD configuration in step 3.  It should be one long line of JS, exactly as copied.
+
+Click the "Add" button and then click "Update" at the bottom of the form to save the changes to the Data Group.
+
+.image:: ../_static/update_dg_item.png
+
+
+ After you have added the JavaScript tag to your web server, continue with step 4 from the screenshot above by adding the domain to protect. In our example f5.com.
 
  .. image:: ../_static/csd-domain-protect.png
  
@@ -54,19 +74,17 @@ Lab 1: Configure CSD and add the JavaScript tag to the web server
 
  Finally proceed with step 5 from the screenshot above to test if the JavaScript tag was added successfully to your web server.
 
- Click on "Test JS Injection" for the domain you want to test. In our example f5demos.com.
+ Click on "Test JS Injection" for the domain you want to test. In our example f5.com.
 
  .. image:: ../_static/csd-js-test1.png 
 
 |
 
- Enter the URL where you have added the JavaScript tag to your web server, click "Test JS Injection" and you should see "JS successfully detected". In our example it is https://shop.sales-demo.f5demos.com.
-
- .. image:: ../_static/csd-js-test2.png
+ Now you can test the site.  On the UDF main page, under the BIG-IP, open 
 
 |
 
-4. Check if the telemetry data are sent to F5.
+1. Check if the telemetry data are sent to F5.
 
  Start the browser's DevTools and go to the webpage where you have added the CSD JavaScript tag, in our example https://shop.sales-demo.f5demos.com. Filter in the Dev tools for "oob" and reload the page until you see a similar POST request as below. This indicates that the telemetry data, collected by the JavaScript, are sent to F5.
 
