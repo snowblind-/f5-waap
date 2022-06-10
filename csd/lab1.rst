@@ -86,13 +86,19 @@ Click the "Add" button and then click "Update" at the bottom of the form to save
 
 1. Check if the telemetry data are sent to F5.
 
- Start the browser's DevTools and go to the webpage where you have added the CSD JavaScript tag, in our example https://shop.sales-demo.f5demos.com. Filter in the Dev tools for "oob" and reload the page until you see a similar POST request as below. This indicates that the telemetry data, collected by the JavaScript, are sent to F5.
+ Start the browser's DevTools and go to the webpage where you have added the CSD JavaScript tag. Filter in the Dev tools for "Doc". This indicates that the telemetry data, collected by the JavaScript, are sent to F5.
 
- .. image:: ../_static/csd-filter-oob.png
- 
+This shows the JS has been inserted into the page
+
+ .. image:: ../_static/js_injection.png
+
+and this shows that the JS has executed and called back to the F5 Cloud with the required telemetry.
+
+.. image:: ../_static/js_download.png
+
 |
 
-5. Configure Logging
+1. Configure Logging
 
  When you enable CSD, CSD automatically creates an Alert Receiver using the email address you entered for your account on Distributed Cloud Console. CSD also automatically creates an Alert Policy and adds a CSD alerts group to this policy. To ensure that you receive alerts when CSD detects suspicious activity, you need to verify your email on the Alert Receiver.
  Just modify the alert receiver email address accordingly if needed or use a different alert mechanism.
