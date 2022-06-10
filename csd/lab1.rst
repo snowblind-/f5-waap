@@ -1,8 +1,8 @@
 Base Configuration of CSD
 ===========================
 
-Lab 1: Configure CSD and add the JavaScript tag to the web server
------------------------------------------------------------------
+Lab 1: Configure CSD and add the JavaScript tag to the web page
+---------------------------------------------------------------
 
 1. Login
  
@@ -22,14 +22,21 @@ Lab 1: Configure CSD and add the JavaScript tag to the web server
 
 |
 
- And enable Client-Side Defense. No worries if another user of the same tenant enabled it already.
+ And enable Client-Side Defense for your tenant. No worries if another user of the same tenant enabled it already.
 
  .. image:: ../_static/csd-enable.png
 
 |
 
-3. Add the JavaScript tag to **your** web server in your UDF
+3. Add the JavaScript tag to **your** web page in UDF by configuring the BIG-IP to include it in the web page response.
 
+Click on "Configuration" and +Add domain to protect
+
+ .. image:: ../_static/csd-addDomainProtect.png
+
+Configure the domain as **f5.com** then **Save & Exit**
+
+ .. image:: ../_static/csd-addDomainSaveNExit.png
 |
 
  Click on "Configuration" - "How to Inject JS" and follow step *1 - 3* on the right for adding the JavaScript tag to **your** webpage between the <head> and </head> tags. Step 5 - 6 is explained below.
@@ -62,15 +69,15 @@ Click the "Add" button and then click "Update" at the bottom of the form to save
 .. image:: ../_static/update_dg_item.png
 
 
- After you have added the JavaScript tag to your web server, continue with step 4 from the screenshot above by adding the domain to protect. In our example f5.com.
+ After you have added the JavaScript tag to your web page, continue with step 4 from the screenshot above by adding the domain to protect. For this lab use **f5.com**.
 
  .. image:: ../_static/csd-domain-protect.png
+
+ Finally proceed with step 5 from the screenshot above to test if the JavaScript tag was added successfully to your web page.
  
-|
-
- Finally proceed with step 5 from the screenshot above to test if the JavaScript tag was added successfully to your web server.
-
- Click on "Test JS Injection" for the domain you want to test. In our example you can copy and paste the JuiceShop link out of your UDF class.
+ Click on "Test JS Injection" for the **f5.com** domain.
+ 
+ In our example you can copy and paste the JuiceShop link out of your UDF class. On the UDF main page, under BIG-IP open the JuiceShop link. Copy the link from the top of your browser and paste it in to URL field.
 
  .. image:: ../_static/csd-js-test1.png 
 
