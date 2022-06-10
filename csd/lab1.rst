@@ -63,7 +63,7 @@ Replace the Value "<REPLACEME>" with the JS you copied from the XC CSD configura
 
 Click the "Add" button and then click "Update" at the bottom of the form to save the changes to the Data Group.
 
-.image:: ../_static/update_dg_item.png
+.. image:: ../_static/update_dg_item.png
 
 
  After you have added the JavaScript tag to your web server, continue with step 4 from the screenshot above by adding the domain to protect. In our example f5.com.
