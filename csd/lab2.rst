@@ -8,7 +8,7 @@ Login to F5 Distributed Cloud using your own account and go to the Client-Side D
 
 |
 
-.. note:: Part of the UDF Deployment is an iRule that both adds the required Telemetry to the Website and some "simulated" malicious JavaScript elements.  If you would like to have a look at this iRule, you can see the files here: | irule |
+.. note:: Part of the UDF Deployment is an iRule that both adds the required Telemetry to the Website and some "simulated" malicious JavaScript elements.  If you would like to have a look at this iRule, you can see the files here: |irule|
 
 |
 
@@ -171,5 +171,5 @@ Set up local Overrides in Chrome DevTools
 
 .. note:: You won't see the overwritten code when you click on *view source code* in the page. If you want to check if the overwrite works, you can e.g. modifiy a title or a text on the page to see the changes on the screen.
 
-.. | irule | raw html
+.. |irule| raw:: html
   <a href="./addClientSideDefense.tcl">addClientSideDefense.tcl</a>
