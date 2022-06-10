@@ -40,10 +40,9 @@ The CSD Dashboard displays the following tabs that you use for displaying data, 
  
  Click on suspicious domains to display the list of the potentially malicious domains. "Select Page" on the right allows to filter.
 
- .. image:: ../_static/csd-suspicious-domains.png
+ .. image:: ../_static/agility-suspicious-domains.png
 
- .. note:: You will see suspicious domains when you login to the *f5-sales-demo* tenant but you probably won't see them when you use your own website with no live traffic. Please see the **Appendix A** at the end of this document to generate artificially suspicious domain entries.
-  
+ .. note:: If you do not see any domains, you may need to wait a few minutes.  Also, refreshing your JuiceShop site page can also help.  The requests are polled and sometimes not all of the requests are reviewed - it is roughly 1 in 5 or 10 requests.  
 |
 
 2. Adding a domain to the Mitigate List or Allow List
@@ -51,8 +50,6 @@ The CSD Dashboard displays the following tabs that you use for displaying data, 
  Go to the row of the relevant domain and select the appropriate action on the right by clicking on the *three dots*. Our example shows how to add the domain jqwereid.online to the Mitigate List. It goes first in the state Added to Mitigated List (green) and change after some time to status Mitigated (blue). 
  Alternatively, you can add domains manually to the Mitigate List or Allow List by going to the Mitigate List or Allow List at the top and, click on *Add domain* and enter the domain name.
 
- .. note:: The monitor user for the f5-sales-com account has read only rights and therefore you can't save your modifications and you will see a 403 forbidden but e.g. the domain fountm-online is already set to mitigated to block requests to this domain which is needed for the next chapter.
- 
  .. image:: ../_static/csd-mitigate.png
 
 |
@@ -71,9 +68,16 @@ The CSD Dashboard displays the following tabs that you use for displaying data, 
 
 3. Show that requests from scripts to the mitigated domains are blocked
  
- Open a browser, go to https://shop.sales-demo.f5demos.com/ and start the browser's DevTools.
+ Open the JuiceShop page (if not already open) and start the browser's DevTools.
 
- Have the network tab and console tab open as shown below and copy & paste the following code into the console::
+ Have the network tab and console tab open as shown below
+ 
+ .. image:: ../_static/agility-demonstrating-csd_7.png
+
+  Click the Clear button so that there are no files listed in the upper window.  
+  If you need to open the Console, click on the 'Console' along the bottom of the Browser window.
+ 
+ Copy & paste the following code into the console::
 
    var s = document.createElement('script')
    s.src = "https://fountm.online/"
@@ -81,7 +85,13 @@ The CSD Dashboard displays the following tabs that you use for displaying data, 
 
  Press enter and you should see a message like in the screenshot below and no request in the network tab.
 
- .. image:: ../_static/csd-block-susp-domain.png
+ .. image:: ../_static/agility-demonstrating-csd_3.png
+
+Hitting Enter will execute the Pasted commands.
+
+ .. image:: ../_static/agility-demonstrating-csd_4.png
+
+This shows that the Domain has been Mitigated.
 
 |
 
@@ -95,7 +105,7 @@ The CSD Dashboard displays the following tabs that you use for displaying data, 
 
  Press enter and you should see that the request is successful and shows up in the network tab with the *status 200*
 
- .. image:: ../_static/csd-block-susp-allow-other.png
+ .. image:: ../_static/agility-demonstrating-csd_1.png
 
 
 |1. Configure Logging
